@@ -1,0 +1,19 @@
+@import "normilize.css";
+@import "global.css";
+@import "fonts.css";
+@import "variables.css";
+@import "overall.css";
+@import "choices.min.css";
+@import "simplebar.css";
+
+/* parts */
+@import "parts/header.css";
+@import "parts/hero.css";
+@import "parts/about.css";
+@import "parts/gallery.css";
+@import "parts/catalog.css";
+@import "parts/events.css";
+@import "parts/books.css";
+@import "parts/projects.css";
+@import "parts/contacts.css";
+@import "parts/footer.css";

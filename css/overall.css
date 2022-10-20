@@ -1,0 +1,39 @@
+.site-container {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1700px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.btn-genral {
+  border: 2px solid var(--purple-color);
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.sw-btn {
+  cursor: pointer;
+  z-index: 100;
+  line-height: .9;
+}
+
+.sw-btn.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+
+@media (max-width: 675px) {
+  .container {
+    padding: 0 15px;
+  }
+}

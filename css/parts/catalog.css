@@ -1,0 +1,539 @@
+.catalog__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.catalog__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.catalog__heading {
+  margin-right: 40px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--dark-color);
+}
+
+.languages__list {
+  display: flex;
+}
+
+.languages__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.languages__img {
+  display: block;
+  width: inherit;
+  height: auto;
+  border-radius: 100px;
+}
+
+.languages__btn {
+  cursor: pointer;
+  line-height: .9;
+  border-radius: 100px;
+}
+
+.languages__btn.is-active {
+  outline-offset: 8px;
+  outline: 2px solid var(--dark-purple-color);
+}
+
+.languages__btn:hover, .languages__btn:focus {
+  box-shadow: 0px 0px 20px rgba(157, 92, 208, 0.7);
+}
+
+.languages__btn:active {
+  outline: 2px solid var(--dark-purple-color);
+}
+
+.catalog__tab-content {
+  display: none;
+}
+
+.catalog__tab-content.is-active {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: .3s;
+}
+
+.catalog__desc {
+  margin-bottom: 40px;
+  max-width: 1080px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.catalog__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.artist {
+  display: none;
+}
+
+.artist.is-active {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  width: 47%;
+}
+
+.artist__img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.artist__name {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--dark-color);
+}
+
+.artist__dates {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.artist__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.unknown__img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.unknown__heading {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--dark-color);
+}
+
+.unknown__desc {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--dark-color);
+}
+
+.unknown__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--purple-color);
+  cursor: pointer;
+}
+
+.catalog__bottom {
+  display: flex;
+}
+
+.catalog__accordions-list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.catalog__accordion {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.catalog__accordion:hover {
+  color: var(--purple-color);
+  transition: color .2s linear;
+}
+
+.catalog__accordion:hover path {
+  fill: #D1A9F0;
+  transition: fill .2s linear;
+}
+
+.catalog__accordion:active {
+  color: var(--dark-purple-color);
+  transition: color .2s linear;
+}
+
+.catalog__accordion:active path {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ui-accordion-header-active path {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.catalog__years:focus span {
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  transition: color .2s linear;
+  transition: background-color .2s linear;
+}
+
+.catalog__years {
+  margin-top: -1px;
+  padding-top: 32px;
+  padding-bottom: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+  cursor: pointer;
+}
+
+.catalog__years:hover, .catalog__years:active {
+  border-color: var(--dark-purple-color);
+  transition: border-color .2s linear;
+}
+
+.ui-accordion-header-icon {
+  display: none;
+}
+
+.catalog__arrow {
+  cursor: pointer;
+}
+
+.catalog__artists-list {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  column-count: 3;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.catalog__artist {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-color);
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.catalog__artist:hover {
+  color: var(--purple-color);
+  transition: color .2s linear;
+  border-color: var(--purple-color);
+  transition: border-color .2s linear;
+}
+
+.catalog__artist:active {
+  color: var(--dark-purple-color);
+  transition: color .2s linear;
+  border-color: transparent;
+}
+
+.catalog__artist:focus {
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  transition: color .2s linear;
+  transition: background-color .2s linear;
+}
+
+.catalog__artist.is-active {
+  color: var(--dark-purple-color);
+  border-color: var(--dark-purple-color);
+}
+
+.empty {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-width: 575px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empty__img {
+  margin-right: 25px;
+  padding: 12px;
+  width: 250px;
+  height: 165px;
+  border: 1px solid #b7b7b7;
+}
+
+.empty__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.empty__heading {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.empty__desc {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--dark-color);
+}
+
+.empty__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--purple-color);
+}
+
+@media (max-width: 1350px) {
+
+  .languages__list {
+    margin-top: 18px;
+  }
+
+  .catalog__top {
+    margin-bottom: 14px;
+  }
+
+  .catalog__heading {
+    margin-right: 43px;
+  }
+
+  .artist {
+    width: 50%;
+  }
+
+  .artist.is-active {
+    width: 50%;
+  }
+
+  .artist__img {
+    margin-bottom: 30px;
+  }
+
+  .artist__name {
+    margin-bottom: 0;
+  }
+
+  .artist__dates {
+    margin-top: 9px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .empty__img {
+    padding: 8px;
+    width: 175px;
+    height: 115px;
+  }
+
+  .catalog__artists-list {
+    column-count: 2;
+    margin-bottom: 24px;
+  }
+
+  .catalog__artist {
+    line-height: 30px;
+  }
+
+  .catalog__years {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .catalog__container {
+    padding-bottom: 70px;
+  }
+
+  .catalog__top {
+    margin-bottom: -3px;
+    align-items: start;
+  }
+
+  .catalog__heading {
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+
+  .languages__list {
+    margin-top: 11px;
+  }
+
+  .languages__item:not(:last-child) {
+    margin-right: 54px;
+  }
+
+  .languages__btn.is-active {
+    outline-offset: 8px;
+  }
+
+  .catalog__desc {
+    margin-bottom: 19px;
+  }
+
+  .catalog__bottom {
+    flex-direction: column-reverse;
+  }
+
+  .catalog__accordions-list {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .catalog__artists-list {
+    column-count: 3;
+    margin-bottom: 26px;
+  }
+
+  .artist.artist.is-active {
+    width: 100%;
+  }
+
+  .artist__name {
+    margin-bottom: 3px;
+  }
+
+  .artist__img {
+    margin-bottom: 28px;
+  }
+
+  .unknown {
+    width: 100%;
+  }
+
+  .empty__img {
+    padding: 12px;
+    width: 250px;
+    height: 165px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog__artists-list {
+    column-count: 1;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .catalog__container {
+    padding-top: 50px;
+    padding-bottom: 51px;
+  }
+
+  .catalog__top {
+    margin-bottom: 17px;
+    flex-direction: column;
+  }
+
+  .catalog__heading {
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .languages__item:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  .languages__btn.is-active {
+    outline-offset: 4px;
+  }
+
+  .languages__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .catalog__desc {
+    display: none;
+  }
+
+  .catalog__accordion {
+    font-size: 18px;
+  }
+
+  .catalog__years {
+    margin-top: -1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .catalog__years svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .catalog__artists-list {
+    margin-top: 20px;
+    margin-bottom: 29px;
+  }
+
+  .artist__img {
+    margin-bottom: 19px;
+  }
+
+  .artist__name {
+    margin-bottom: 2px;
+    font-size: 24px;
+  }
+
+  .artist__dates {
+    margin-top: 14px;
+    font-size: 12px;
+  }
+
+  .empty__img {
+    padding: 6px;
+    width: 80px;
+    height: 120px;
+  }
+
+  .empty__heading {
+    font-size: 18px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,233 @@
+.projects__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.projects__heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--dark-color);
+}
+
+.projects__desc {
+  margin-bottom: 20px;
+  max-width: 1080px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.partners__heading {
+  margin-bottom: 23px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--dark-color);
+}
+
+.projects__tooltip {
+  border: none;
+  position: relative;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../../img/tooltip.svg);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.projects__tooltip:hover {
+  background-image: url(../../img/tooltip_purple.svg);
+}
+
+.tippy-box[data-theme~='purple'] {
+  width: 250px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 0;
+  background-color: var(--purple-color);
+  color: var(--white-color);
+}
+
+.tippy-box[data-theme~='purple'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: var(--purple-color);
+}
+
+.tippy-box[data-theme~='purple'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--purple-color);
+}
+
+.projects__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--purple-color);
+  white-space: nowrap;
+}
+
+.projects__link:hover {
+  border-bottom: 1px solid var(--purple-color);
+  transition: border-bottom .2s linear;
+}
+
+.projects__link:active {
+  border-bottom: 1px solid var(--dark-purple-color);
+  transition: border-bottom .2s linear;
+}
+
+.projects__link:focus {
+  border-bottom: none;
+  color: var(--white-color);
+  transition: color .2s linear;
+  background-color: var(--purple-color);
+  transition: background-color .2s linear;
+}
+
+.partners__flex {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.partners__swiper {
+  padding-left: 45px;
+  padding-right: 45px;
+  width: 1550px;
+  overflow: hidden;
+}
+
+.partners__swiper-slide {
+  width: 450px;
+  height: 150px;
+  position: relative;
+  border: 1px solid #CACACA;
+  cursor: pointer;
+}
+
+.partners__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: .4;
+  transition: opacity .2s linear;
+}
+
+.partners__swiper-slide:hover .partners__img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+
+.partners__swiper-slide:focus {
+  border-color: var(--purple-color);
+}
+
+.partners__swiper-slide:active {
+  border-color: var(--purple-color);
+}
+
+.partners__swiper-slide:active .partners__img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+
+.partners__swiper-btn-next:hover path, .partners__swiper-btn-prev:hover path {
+  fill: #D1A9F0;
+  transition: fill .2s linear;
+}
+
+.partners__swiper-btn-next:active path, .partners__swiper-btn-prev:active path {
+  stroke: var(--dark-purple-color);
+  transition: stroke .2s linear;
+}
+
+.partners__swiper-btn-next:focus path, .partners__swiper-btn-prev:focus path {
+  stroke: var(--dark-purple-color);
+  transition: stroke .2s linear;
+}
+
+@media (max-width: 1300px) {
+
+  .projects__heading {
+    margin-bottom: 16px;
+  }
+
+  .partners__swiper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .partners__swiper-slide {
+    height: 128px;
+  }
+
+  .partners__img {
+    width: 55%;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .projects__desc {
+    max-width: 660px;
+    margin-bottom: 25px;
+  }
+
+  .partners__heading {
+    margin-bottom: 27px;
+  }
+
+  .partners__swiper-slide {
+    height: 106px;
+  }
+
+  .partners__img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .projects__heading {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .projects__desc {
+    margin-bottom: 9px;
+  }
+
+  .partners__heading {
+    margin-bottom: 11px;
+    font-size: 18px;
+  }
+
+  .partners__swiper {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .partners__swiper-slide {
+    height: 65px;
+    width: 195px;
+  }
+
+  .partners__img {
+    width: 70%;
+  }
+}
